@@ -13,8 +13,10 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
+        tabBarInactiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        headerShown: true,
         tabBarButton: HapticTab,
+        headerTitleAlign: "center"
       }}>
       <Tabs.Screen
         name="index"
@@ -24,10 +26,10 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="contact"
         options={{
           title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="people-circle-outline.fill" color={color} />,
         }}
       />
     </Tabs>
