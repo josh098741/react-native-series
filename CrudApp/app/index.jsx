@@ -70,7 +70,7 @@ export default function Index() {
   }
 
   const toggleTodo = (id) => {
-    setTodos(todos.map(todo => 
+    setTodos(todos.map(todo =>  
       todo.id === id ? { ...todo, completed: !todo.completed } : todo
     ))
   }
